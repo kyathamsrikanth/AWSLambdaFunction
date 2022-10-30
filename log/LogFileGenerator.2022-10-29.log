@@ -1,0 +1,28 @@
+21:25:27.343 [default-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+21:25:27.410 [main] INFO  AkkaHttpService$ - T is 02:06:31 and dT is 02:12:45
+21:25:28.221 [default-akka.actor.default-dispatcher-4] INFO  AkkaHttpService$ - HttpEntity.Strict(application/json,229 bytes total)
+21:25:28.222 [default-akka.actor.default-dispatcher-4] INFO  AkkaHttpService$ - 200 OK
+21:25:28.222 [default-akka.actor.default-dispatcher-4] INFO  AkkaHttpService$ - List(Date: Sun, 30 Oct 2022 02:25:28 GMT, Connection: keep-alive, x-amzn-RequestId: 4bd6f96a-d682-41c8-8830-8c1284ad30d0, x-amz-apigw-id: azAHyHdYoAMFu1w=, X-Amzn-Trace-Id: Root=1-635de098-5baff58e22a2e52b4211fd29;Sampled=0)
+21:25:28.227 [default-akka.actor.default-dispatcher-5] INFO  AkkaHttpService$ - {"errorMessage":"java.lang.NullPointerException","errorType":"java.lang.NullPointerException","stackTrace":["MyLambdaFunction.handleRequest(MyLambdaFunction.scala:32)","MyLambdaFunction.handleRequest(MyLambdaFunction.scala:15)"]}
+22:00:51.009 [default-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+22:00:51.077 [main] INFO  AkkaHttpService$ - T is 02:06:31 and dT is 02:12:45
+22:23:44.117 [default-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+22:23:44.183 [main] INFO  AkkaHttpService$ - T is 02:06:31 and dT is 02:12:45
+22:24:30.275 [default-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+22:24:30.339 [main] INFO  AkkaHttpService$ - T is 02:06:31 and dT is 02:12:45
+22:24:47.625 [default-akka.actor.default-dispatcher-4] INFO  AkkaHttpService$ - HttpEntity.Strict(application/json,264 bytes total)
+22:24:47.625 [default-akka.actor.default-dispatcher-4] INFO  AkkaHttpService$ - 400 Bad Request
+22:24:47.626 [default-akka.actor.default-dispatcher-4] INFO  AkkaHttpService$ - List(Date: Sun, 30 Oct 2022 03:24:47 GMT, Connection: close, x-amzn-RequestId: 28eb3c64-6e00-4f81-a374-046cc3b1c0cb, x-amzn-ErrorType: BadRequestException, x-amz-apigw-id: azIz-GU8oAMFbnw=)
+22:24:47.636 [default-akka.actor.default-dispatcher-5] INFO  AkkaHttpService$ - {"message": "Could not parse request body into json: Could not parse payload into json: Unrecognized token \'body\': was expecting (JSON String, Number, Array, Object or token \'null\', \'true\' or \'false\')\n at [Source: (byte[])\"body:k\"; line: 1, column: 6]"}
+22:25:08.295 [default-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+22:25:08.360 [main] INFO  AkkaHttpService$ - T is 02:06:31 and dT is 02:12:45
+22:25:09.474 [default-akka.actor.default-dispatcher-4] INFO  AkkaHttpService$ - HttpEntity.Strict(application/json,168 bytes total)
+22:25:09.474 [default-akka.actor.default-dispatcher-4] INFO  AkkaHttpService$ - 200 OK
+22:25:09.475 [default-akka.actor.default-dispatcher-4] INFO  AkkaHttpService$ - List(Date: Sun, 30 Oct 2022 03:25:09 GMT, Connection: close, x-amzn-RequestId: cebe684e-9760-4f84-9f4e-72954d55a302, x-amz-apigw-id: azI3TFsCoAMF-xw=, X-Amzn-Trace-Id: Root=1-635dee94-14157a89240aea89481f5ddd;Sampled=0)
+22:25:09.481 [default-akka.actor.default-dispatcher-8] INFO  AkkaHttpService$ - {"statusCode":200,"headers":{"Content-Type":"application/json"},"body":"{\"status\":200,\"message\":\"Logs found within the given time range\"}","isBase64Encoded":true}
+22:25:17.919 [default-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+22:25:17.981 [main] INFO  AkkaHttpService$ - T is 02:06:31 and dT is 02:12:45
+22:25:18.995 [default-akka.actor.default-dispatcher-5] INFO  AkkaHttpService$ - HttpEntity.Strict(application/json,168 bytes total)
+22:25:18.995 [default-akka.actor.default-dispatcher-5] INFO  AkkaHttpService$ - 200 OK
+22:25:18.995 [default-akka.actor.default-dispatcher-5] INFO  AkkaHttpService$ - List(Date: Sun, 30 Oct 2022 03:25:18 GMT, Connection: close, x-amzn-RequestId: c6739e81-7982-4d23-98fd-6a463d9e489a, x-amz-apigw-id: azI4zHp4oAMFjfQ=, X-Amzn-Trace-Id: Root=1-635dee9e-77c197105796a80c4a75698a;Sampled=0)
+22:25:19.002 [default-akka.actor.default-dispatcher-4] INFO  AkkaHttpService$ - {"statusCode":200,"headers":{"Content-Type":"application/json"},"body":"{\"status\":200,\"message\":\"Logs found within the given time range\"}","isBase64Encoded":true}

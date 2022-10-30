@@ -1,0 +1,4 @@
+[0m[[0m[0mdebug[0m] [0m[0mCopy resource mappings: [0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/Users/srikanthkyatham/class441/AWSLambdaFunction/LamdaFunction/src/main/resources/logback.xml,/Users/srikanthkyatham/class441/AWSLambdaFunction/LamdaFunction/target/scala-2.13/classes/logback.xml)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/Users/srikanthkyatham/class441/AWSLambdaFunction/LamdaFunction/src/main/resources/logback-test.xml,/Users/srikanthkyatham/class441/AWSLambdaFunction/LamdaFunction/target/scala-2.13/classes/logback-test.xml)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/Users/srikanthkyatham/class441/AWSLambdaFunction/LamdaFunction/src/main/resources/application.conf,/Users/srikanthkyatham/class441/AWSLambdaFunction/LamdaFunction/target/scala-2.13/classes/application.conf)[0m

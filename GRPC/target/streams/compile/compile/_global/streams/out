@@ -1,0 +1,37 @@
+[0m[[0m[31merror[0m] [0m[0m/Users/srikanthkyatham/class441/AWSLambdaFunction/GRPC/src/main/scala/gRPCClient.scala:1:8: object LogCheckerGrpc is not a member of package MyProtoBuf[0m
+[0m[[0m[31merror[0m] [0m[0mimport MyProtoBuf.{LogCheckerGrpc, LogRequest}[0m
+[0m[[0m[31merror[0m] [0m[0m       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/srikanthkyatham/class441/AWSLambdaFunction/GRPC/src/main/scala/gRPCClient.scala:2:19: object LogCheckerGrpc is not a member of package MyProtoBuf[0m
+[0m[[0m[31merror[0m] [0m[0mimport MyProtoBuf.LogCheckerGrpc.LogCheckerBlockingStub[0m
+[0m[[0m[31merror[0m] [0m[0m                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/srikanthkyatham/class441/AWSLambdaFunction/GRPC/src/main/scala/gRPCClient.scala:32:88: not found: type LogCheckerBlockingStub[0m
+[0m[[0m[31merror[0m] [0m[0mclass gRPCClient private(private val channel: ManagedChannel,private val blockingStub: LogCheckerBlockingStub) {[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                                       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/srikanthkyatham/class441/AWSLambdaFunction/GRPC/src/main/scala/gRPCClient.scala:16:24: not found: value LogCheckerGrpc[0m
+[0m[[0m[31merror[0m] [0m[0m    val blockingStub = LogCheckerGrpc.blockingStub(channel)[0m
+[0m[[0m[31merror[0m] [0m[0m                       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/srikanthkyatham/class441/AWSLambdaFunction/GRPC/src/main/scala/gRPCClient.scala:46:19: not found: value LogRequest[0m
+[0m[[0m[31merror[0m] [0m[0m    val request = LogRequest(name)[0m
+[0m[[0m[31merror[0m] [0m[0m                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/srikanthkyatham/class441/AWSLambdaFunction/GRPC/src/main/scala/gRPCServer.scala:1:8: object LogCheckerGrpc is not a member of package MyProtoBuf[0m
+[0m[[0m[31merror[0m] [0m[0mimport MyProtoBuf.{LogCheckerGrpc, LogReply, LogRequest}[0m
+[0m[[0m[31merror[0m] [0m[0m       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/srikanthkyatham/class441/AWSLambdaFunction/GRPC/src/main/scala/gRPCServer.scala:68:40: not found: value LogCheckerGrpc[0m
+[0m[[0m[31merror[0m] [0m[0m  private class LogCheckerImpl extends LogCheckerGrpc.LogChecker {[0m
+[0m[[0m[31merror[0m] [0m[0m                                       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/srikanthkyatham/class441/AWSLambdaFunction/GRPC/src/main/scala/gRPCServer.scala:45:64: not found: value LogCheckerGrpc[0m
+[0m[[0m[31merror[0m] [0m[0m    server = ServerBuilder.forPort(gRPCServer.port).addService(LogCheckerGrpc.bindService(new LogCheckerImpl, executionContext)).build.start[0m
+[0m[[0m[31merror[0m] [0m[0m                                                               ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/srikanthkyatham/class441/AWSLambdaFunction/GRPC/src/main/scala/gRPCServer.scala:77:64: not found: type LogReply[0m
+[0m[[0m[31merror[0m] [0m[0m    override def checkTimestampInLogs(req: LogRequest): Future[LogReply] = {[0m
+[0m[[0m[31merror[0m] [0m[0m                                                               ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/srikanthkyatham/class441/AWSLambdaFunction/GRPC/src/main/scala/gRPCServer.scala:77:44: not found: type LogRequest[0m
+[0m[[0m[31merror[0m] [0m[0m    override def checkTimestampInLogs(req: LogRequest): Future[LogReply] = {[0m
+[0m[[0m[31merror[0m] [0m[0m                                           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/srikanthkyatham/class441/AWSLambdaFunction/GRPC/src/main/scala/gRPCServer.scala:82:22: not found: value LogReply[0m
+[0m[[0m[31merror[0m] [0m[0m      val response = LogReply(message = responseJson)[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/srikanthkyatham/class441/AWSLambdaFunction/GRPC/src/main/scala/gRPCServer.scala:82:31: not found: value message[0m
+[0m[[0m[31merror[0m] [0m[0m      val response = LogReply(message = responseJson)[0m
+[0m[[0m[31merror[0m] [0m[0m                              ^[0m
+[0m[[0m[31merror[0m] [0m[0m12 errors found[0m

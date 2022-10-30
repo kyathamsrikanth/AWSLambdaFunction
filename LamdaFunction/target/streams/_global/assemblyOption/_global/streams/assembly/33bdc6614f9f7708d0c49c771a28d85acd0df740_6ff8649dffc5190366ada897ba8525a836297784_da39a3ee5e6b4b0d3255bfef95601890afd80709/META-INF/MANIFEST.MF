@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Created-By: Apache Maven 3.6.1
+Built-By: ryansch
+Build-Jdk: 11
+Automatic-Module-Name: software.amazon.eventstream
+

@@ -1,0 +1,3 @@
+[debug] not up to date. inChanged = true, force = false
+[debug] Updating ProjectRef(uri("file:/Users/srikanthkyatham/class441/AWSLambdaFunction/GRPC/project/"), "grpc-build")...
+[debug] Done updating ProjectRef(uri("file:/Users/srikanthkyatham/class441/AWSLambdaFunction/GRPC/project/"), "grpc-build")

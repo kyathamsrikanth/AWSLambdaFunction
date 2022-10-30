@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+service findTimeStampInLogs {
+  rpc fetchTimeStampInLogs (mesageRequest) returns (messageResponse) {}
+}
+
+//  request message   .
+message mesageRequest {
+  string request = 1;
+}
+
+//  response message
+message messageResponse {
+  string message = 1;
+}
