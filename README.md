@@ -101,7 +101,7 @@ Steps to generate Jar to Deploy to AWS :
 
 
 
-## Deploying LogFileGenerator in EC2 Instance.
+### Deploying LogFileGenerator in EC2 Instance.
 
 ### LogFileGenerator code
  Repository: https://github.com/kyathamsrikanth/CS441_Fall2022/tree/main/LogFileGenerator

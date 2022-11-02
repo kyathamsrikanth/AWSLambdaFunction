@@ -1,4 +1,5 @@
 
+import CommonUtils.logger
 import com.amazonaws.services.lambda.runtime.LambdaLogger
 import com.typesafe.config.Config
 import org.apache.commons.codec.digest.DigestUtils
@@ -43,6 +44,8 @@ object CommonUtils {
   }
 
   def findLogs(startTime: String, timeDelta: String, bufferReader: BufferedReader, fileSize: Long, logger: LambdaLogger): Boolean = {
+    // get time interval from start time and time delta
+    CommonUtils.logger.info("get time interval from start time and time delta")
     val givenTime = new SimpleDateFormat("HH:mm").parse(startTime)
     val intervalStartTime = Date.from(givenTime.toInstant.minus(Duration.ofMinutes((timeDelta.toInt))))
     val intervalEndTime = Date.from(givenTime.toInstant.plus(Duration.ofMinutes((timeDelta.toInt))))
@@ -75,6 +78,7 @@ object CommonUtils {
   }
 
   def getlogTimeFormatRegex: String = {
+    // get logTimeFormatRegex from Config
     val intervalTimeFrame = config.getString(s"CONFIG.logTimeFormatRegex")
     intervalTimeFrame
   }
@@ -99,14 +103,18 @@ object CommonUtils {
   }
 
   def getLogswithDesignatedPattern(startTime: String, timeDelta: String, br: BufferedReader, fileSize: Long, logger: LambdaLogger): List[String] = {
+    // get the interval from time delta and start time
+    CommonUtils.logger.info("get time interval from start time and time delta")
     val givenTime = new SimpleDateFormat("HH:mm").parse(startTime)
     val intervalStartTime = Date.from(givenTime.toInstant.minus(Duration.ofMinutes((timeDelta.toInt))))
     val intervalEndTime = Date.from(givenTime.toInstant.plus(Duration.ofMinutes((timeDelta.toInt))))
     br.reset()
+    CommonUtils.logger.info("do Binary Search And Get StartI ndex")
     val start = doBinarySearchAndGetStartIndex(0, fileSize, br, intervalStartTime, intervalEndTime, fileSize, logger)
     if (start < 0) {
       br.reset()
       val line = br.readLine()
+      CommonUtils.logger.info("processLogFiles")
       processLogFiles(br, intervalStartTime, intervalEndTime, line) match {
         case Some(toReturn) => return toReturn
         case None =>
@@ -119,10 +127,13 @@ object CommonUtils {
   }
 
     def doBinarySearchAndGetStartIndex (min: Long, max: Long, br: BufferedReader, start: Date, end: Date, fileSize: Long, logger: LambdaLogger): Long = {
+      // Do Binary Search using mid and max  and find the start time in the log file
+      CommonUtils.logger.info("Finding Mid ")
       val mid = (min + max) / 2
       if ((min > max) || (mid < 0) || (mid > fileSize)) {
         return -1
       }
+      // Fetch the Mid line of the given Log
       val log = fetchMidLog(br, mid)
       if (!log.isEmpty) {
         val logTimeFormatRegex = getlogTimeFormatRegex.r
@@ -130,8 +141,10 @@ object CommonUtils {
         if (midlogTimeStamp.compareTo(start) == 0) {
           return mid
         } else if (midlogTimeStamp.compareTo(start) < 0) {
+          // Case if  midlogTimeStamp is smaller than start
           return doBinarySearchAndGetStartIndex(mid + 1, max, br, start, end, fileSize, logger)
         } else if (midlogTimeStamp.compareTo(start) > 0) {
+          // Case if  midlogTimeStamp is  greater  than start
           return doBinarySearchAndGetStartIndex(min, mid - 1, br, start, end, fileSize, logger)
         }
       }
@@ -148,6 +161,7 @@ object CommonUtils {
       if ((midlogTimeStamp.compareTo(intervalStartTime) >= 0 && midlogTimeStamp.compareTo(intervalEndTime) <= 0)) {
         val arrayList = List()
         val resultList = getDesignatedLogsInTimeFrame(arrayList, br, intervalStartTime, intervalEndTime)
+        //  return md5Hex Hash Message
         return Some(DigestUtils.md5Hex(log.getBytes(StandardCharsets.UTF_8)) :: resultList.reverse)
       }
     } else {
@@ -157,6 +171,7 @@ object CommonUtils {
       if ((midlogTimeStamp.compareTo(intervalStartTime) >= 0 && midlogTimeStamp.compareTo(intervalEndTime) <= 0)) {
         val arrayList = List()
         val resultList = getDesignatedLogsInTimeFrame(arrayList, br, intervalStartTime, intervalEndTime)
+        // return md5Hex Hash Message
         return Some(DigestUtils.md5Hex(line.getBytes(StandardCharsets.UTF_8)) :: resultList.reverse)
       }
     }
@@ -165,11 +180,12 @@ object CommonUtils {
 
   def getDesignatedLogsInTimeFrame(stringList: List[String], br: BufferedReader, startTime: Date, endTime: Date): List[String] = {
     val line = br.readLine()
-
-    if (getLogTimeStamp(line).isEmpty) { //if the line read does not have a timestamp read the next line and return
+    if (getLogTimeStamp(line).isEmpty) {
+      //if the line read does not have a timestamp read the next line and return
       val log = Option.apply(br.readLine()).get
       extractLogs(stringList, br, startTime, endTime, log)
     } else {
+      // Extract logs from the current line
       extractLogs(stringList, br, startTime, endTime, line)
     }
   }
@@ -177,10 +193,12 @@ object CommonUtils {
   private def extractLogs(stringList: List[String], br: BufferedReader, startTime: Date, endTime: Date, line: String) = {
     val logTimeFormatRegex = getlogTimeFormatRegex.r
     val midlogTimeStamp = new SimpleDateFormat("HH:mm").parse(logTimeFormatRegex.findFirstIn(line).get)
+    // Check if  midlogTimeStamp is in Given interval
     if (!(midlogTimeStamp.compareTo(startTime) >= 0 && midlogTimeStamp.compareTo(endTime) <= 0)) {
       stringList
     }
     else {
+      // Recursively iterate next line
       getDesignatedLogsInTimeFrame(DigestUtils.md5Hex(line.getBytes(StandardCharsets.UTF_8)) :: stringList, br, startTime, endTime)
     }
   }
