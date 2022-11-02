@@ -20,7 +20,7 @@ class AkkaHttpServiceTest extends AnyFunSuite {
   }
 
 
-  test("testAWSAPIGateWayURL") {
+  test("sendAPIGateWayRequest") {
     // Calling API Gateway Reuqest
     val futureResponse = Await.result(sendAPIGateWayRequest(), timeout)
     // Assert that response is success
