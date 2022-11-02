@@ -1,0 +1,3 @@
+01:40:22.054 [default-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+01:40:22.119 [main] INFO  AkkaHttpService$ - Building HTTP Request
+01:40:22.198 [main] INFO  AkkaHttpService$ - POST HTTP Request
