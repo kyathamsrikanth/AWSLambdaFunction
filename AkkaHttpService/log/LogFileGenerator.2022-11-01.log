@@ -16,3 +16,12 @@
 19:33:47.078 [default-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger - Slf4jLogger started
 19:33:47.123 [sbt-bg-threads-1] INFO  AkkaHttpService$ - Building HTTP Request
 19:33:47.186 [sbt-bg-threads-1] INFO  AkkaHttpService$ - POST HTTP Request
+20:19:22.395 [default-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+20:19:22.439 [sbt-bg-threads-1] INFO  AkkaHttpService$ - Building HTTP Request
+20:19:22.503 [sbt-bg-threads-1] INFO  AkkaHttpService$ - POST HTTP Request
+20:20:08.906 [default-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+20:20:08.953 [sbt-bg-threads-1] INFO  AkkaHttpService$ - Building HTTP Request
+20:20:09.018 [sbt-bg-threads-1] INFO  AkkaHttpService$ - POST HTTP Request
+20:21:34.005 [default-akka.actor.default-dispatcher-5] INFO  akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+20:21:34.049 [sbt-bg-threads-1] INFO  AkkaHttpService$ - Building HTTP Request
+20:21:34.110 [sbt-bg-threads-1] INFO  AkkaHttpService$ - POST HTTP Request

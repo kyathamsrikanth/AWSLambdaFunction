@@ -51,3 +51,33 @@
 19:33:33.784 [default-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger - Slf4jLogger started
 19:33:33.849 [main] INFO  AkkaHttpService$ - Building HTTP Request
 19:33:33.919 [main] INFO  AkkaHttpService$ - POST HTTP Request
+20:04:43.694 [default-akka.actor.default-dispatcher-5] INFO  akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+20:05:12.859 [default-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+20:05:30.213 [default-akka.actor.default-dispatcher-5] INFO  akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+20:06:24.138 [default-akka.actor.default-dispatcher-5] INFO  akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+20:07:39.752 [default-akka.actor.default-dispatcher-6] INFO  akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+20:07:39.822 [ScalaTest-run-running-AkkaHttpServiceTest] INFO  AkkaHttpService$ - Building HTTP Request
+20:07:39.908 [ScalaTest-run-running-AkkaHttpServiceTest] INFO  AkkaHttpService$ - POST HTTP Request
+20:07:49.419 [ScalaTest-run-running-AkkaHttpServiceTest] INFO  AkkaHttpService$ - Building HTTP Request
+20:07:49.420 [ScalaTest-run-running-AkkaHttpServiceTest] INFO  AkkaHttpService$ - POST HTTP Request
+20:08:22.300 [default-akka.actor.default-dispatcher-6] INFO  akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+20:08:22.364 [ScalaTest-run-running-AkkaHttpServiceTest] INFO  AkkaHttpService$ - Building HTTP Request
+20:08:22.440 [ScalaTest-run-running-AkkaHttpServiceTest] INFO  AkkaHttpService$ - POST HTTP Request
+20:09:11.257 [default-akka.actor.default-dispatcher-6] INFO  akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+20:09:11.316 [ScalaTest-run-running-AkkaHttpServiceTest] INFO  AkkaHttpService$ - Building HTTP Request
+20:09:11.397 [ScalaTest-run-running-AkkaHttpServiceTest] INFO  AkkaHttpService$ - POST HTTP Request
+20:19:55.514 [default-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+20:19:55.583 [main] INFO  AkkaHttpService$ - Building HTTP Request
+20:19:55.656 [main] INFO  AkkaHttpService$ - POST HTTP Request
+20:20:35.563 [default-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+20:20:35.628 [main] INFO  AkkaHttpService$ - Building HTTP Request
+20:20:35.705 [main] INFO  AkkaHttpService$ - POST HTTP Request
+20:22:24.923 [default-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+20:22:24.991 [ScalaTest-run-running-AkkaHttpServiceTest] INFO  AkkaHttpService$ - Building HTTP Request
+20:22:25.077 [ScalaTest-run-running-AkkaHttpServiceTest] INFO  AkkaHttpService$ - POST HTTP Request
+20:23:57.705 [default-akka.actor.default-dispatcher-5] INFO  akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+20:23:57.767 [ScalaTest-run-running-AkkaHttpServiceTest] INFO  AkkaHttpService$ - Building HTTP Request
+20:23:57.851 [ScalaTest-run-running-AkkaHttpServiceTest] INFO  AkkaHttpService$ - POST HTTP Request
+20:24:11.852 [default-akka.actor.default-dispatcher-5] INFO  akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+20:24:11.917 [ScalaTest-run-running-AkkaHttpServiceTest] INFO  AkkaHttpService$ - Building HTTP Request
+20:24:12.000 [ScalaTest-run-running-AkkaHttpServiceTest] INFO  AkkaHttpService$ - POST HTTP Request
