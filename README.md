@@ -135,6 +135,8 @@ Steps to deploy  and run LogFileGenerator on EC2 Instance :
     ```
     cronjob -e
     ```
+    
+* Please watch below video on how to deploy in aws and run above projects : https://drive.google.com/file/d/1beg_vj_EFyOO2oIaF9Mw2p8cK6igk0Bf/view?usp=sharing
 
 
 
