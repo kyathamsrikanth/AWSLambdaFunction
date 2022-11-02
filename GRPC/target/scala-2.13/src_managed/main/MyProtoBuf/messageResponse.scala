@@ -5,7 +5,7 @@
 
 package MyProtoBuf
 
-/** The response message containing the hashed logs
+/**  response message
   */
 @SerialVersionUID(0L)
 final case class messageResponse(

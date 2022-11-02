@@ -13,7 +13,7 @@ object gRPCServer {
   val config: Config  = ConfigFactory.load()
   private val logger = Logger.getLogger(classOf[gRPCServer].getName)
 
-  def main(args: Array[String]): Unit = {
+  def main(args: Array [String]): Unit = {
     val server: gRPCServer = new gRPCServer(ExecutionContext.global)
     startServer(server)
     blockServerUntilShutdown(server)

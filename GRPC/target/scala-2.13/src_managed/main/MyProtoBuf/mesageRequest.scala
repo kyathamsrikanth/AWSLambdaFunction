@@ -5,7 +5,7 @@
 
 package MyProtoBuf
 
-/** The request message containing the T and dT.
+/**  request message   .
   */
 @SerialVersionUID(0L)
 final case class mesageRequest(

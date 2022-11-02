@@ -5,7 +5,9 @@ import akka.http.scaladsl.model.{ContentTypes, HttpEntity, HttpMethods, HttpRequ
 import akka.util.ByteString
 import com.typesafe.config.Config
 import akka.actor.ActorSystem
-import scala.concurrent.Future
+
+import scala.concurrent.{Await, Future}
+import scala.concurrent.duration.{DurationInt, FiniteDuration}
 import scala.util.{Failure, Success}
 
 object AkkaHttpService {
@@ -21,38 +23,27 @@ object AkkaHttpService {
   val deltaTime: String = config.getString("CONFIG.deltaTimeInterval")
   val date: String = config.getString("CONFIG.date")
   val designatedPattern : String = config.getString("CONFIG.designatedPattern")
+  val timeout: FiniteDuration = config.getInt("CONFIG.futureAwait").seconds
 
-  def sendAPIGateWayRequest(): Unit = {
+  def sendAPIGateWayRequest(): Future[String] = {
     // Building HTTP Request
 
     logger.info("Building HTTP Request")
     val request = HttpRequest(method = HttpMethods.POST, uri = s"$AWSAPIGateWayURL", entity = HttpEntity(ContentTypes.`application/json`, formatHttpContent))
     logger.info("POST HTTP Request")
+
     val eventualHttpResponse: Future[HttpResponse] = Http().singleRequest(request)
     // Parse output Json to get Output
-    processHTTPResponse(eventualHttpResponse)
+    val entityFuture: Future[HttpEntity.Strict] = eventualHttpResponse.flatMap(response => response.entity.toStrict(timeout))
+    entityFuture.map(entity => entity.data.utf8String)
   }
 
   private def formatHttpContent = {
     "{\n  \"body\": \"{\\\"timeStamp\\\" : \\\"%s\\\",\\\"date\\\" : \\\"%s\\\",\\\"deltaTime\\\" : \\\"%s\\\",\\\"pattern\\\" : \\\"%s\\\"}\"\n}".format(timeStamp, date, deltaTime, designatedPattern)
   }
 
-  private def processHTTPResponse(eventualHttpResponse: Future[HttpResponse]): Unit = {
-    eventualHttpResponse.onComplete {
-      case Success(res) =>
-        val HttpResponse(statusCodes, headers, entity, _) = res
-        logger.info(entity.toString)
-        logger.info(statusCodes.toString)
-        logger.info(headers.toString)
-        entity.dataBytes.runFold(ByteString(""))(_ ++ _).foreach(body => {
-          logger.info(body.utf8String)
-        })
-        system.terminate()
-      case Failure(_) => sys.error("HTTP POST Request Failed")
-    }
-  }
-
   def main(args: Array[String]): Unit = {
-    sendAPIGateWayRequest()
+    System.out.println(Await.result(sendAPIGateWayRequest(), timeout))
+    System.exit(0)
   }
 }

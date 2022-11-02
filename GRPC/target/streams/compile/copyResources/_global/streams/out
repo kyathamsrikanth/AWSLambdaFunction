@@ -1,0 +1,3 @@
+[0m[[0m[0mdebug[0m] [0m[0mCopy resource mappings: [0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/Users/srikanthkyatham/class441/AWSLambdaFunction/GRPC/src/main/protobuf/MyProtoBuf.proto,/Users/srikanthkyatham/class441/AWSLambdaFunction/GRPC/target/scala-2.13/classes/MyProtoBuf.proto)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/Users/srikanthkyatham/class441/AWSLambdaFunction/GRPC/src/main/resources/application.conf,/Users/srikanthkyatham/class441/AWSLambdaFunction/GRPC/target/scala-2.13/classes/application.conf)[0m

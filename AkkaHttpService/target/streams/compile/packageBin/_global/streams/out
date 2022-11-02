@@ -1,0 +1,17 @@
+[0m[[0m[0mdebug[0m] [0m[0mPackaging /Users/srikanthkyatham/class441/AWSLambdaFunction/AkkaHttpService/target/scala-2.13/akkahttpservice_2.13-0.1.0-SNAPSHOT.jar ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	logback.xml[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/srikanthkyatham/class441/AWSLambdaFunction/AkkaHttpService/target/scala-2.13/classes/logback.xml[0m
+[0m[[0m[0mdebug[0m] [0m[0m	logback-test.xml[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/srikanthkyatham/class441/AWSLambdaFunction/AkkaHttpService/target/scala-2.13/classes/logback-test.xml[0m
+[0m[[0m[0mdebug[0m] [0m[0m	AkkaHttpService.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/srikanthkyatham/class441/AWSLambdaFunction/AkkaHttpService/target/scala-2.13/classes/AkkaHttpService.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	GetConfigClass.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/srikanthkyatham/class441/AWSLambdaFunction/AkkaHttpService/target/scala-2.13/classes/GetConfigClass.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	GetConfigClass$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/srikanthkyatham/class441/AWSLambdaFunction/AkkaHttpService/target/scala-2.13/classes/GetConfigClass$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	application.conf[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/srikanthkyatham/class441/AWSLambdaFunction/AkkaHttpService/target/scala-2.13/classes/application.conf[0m
+[0m[[0m[0mdebug[0m] [0m[0m	AkkaHttpService$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/srikanthkyatham/class441/AWSLambdaFunction/AkkaHttpService/target/scala-2.13/classes/AkkaHttpService$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0mDone packaging.[0m
